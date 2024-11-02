@@ -88,6 +88,8 @@ Một partitioner trong Kafka là logic mã hóa có nhiệm vụ xác định x
 
 Kafka Producers sử dụng một cơ chế partition mặc định để gán message vào partition thích hợp của topic Kafka. Nếu một message có key, cơ chế này sẽ sử dụng key đó để xác định partition, đảm bảo rằng tất cả các message có cùng key sẽ đi vào cùng một partition.
 
+![Message Key Hashing](/images/kafka-11.png)
+
 Hashing key là quá trình ánh xạ một key đến một partition cụ thể.
 
 Kafka sử dụng thuật toán **murmur2** để băm key. Công thức tính toán partition mục tiêu (targetPartition) là:
