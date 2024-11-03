@@ -18,6 +18,8 @@ Sự phụ thuộc vào Zookeeper đã gây ra một số hạn chế khi Kafka 
 
 KRaft (Kafka Raft) tận dụng metadata Kafka như một log để lưu trữ, cho phép các broker Kafka tự quản lý dữ liệu mà không cần Zookeeper. KRaft sử dụng **Raft protocol** để thực hiện các cuộc bầu chọn controller, mang lại các lợi ích chính sau:
 
+![Zookeeper vs Raft Controller](/images/kafka-32.png)
+
 - **Khả năng mở rộng tốt hơn**: Hỗ trợ hàng triệu phân vùng và dễ dàng duy trì, thiết lập.
 - **Ổn định cao hơn**: Việc giám sát, hỗ trợ và quản lý cụm Kafka trở nên đơn giản hơn.
 - **Bắt đầu một quy trình duy nhất**: Chỉ cần một quy trình để khởi động Kafka, thay vì khởi động cả Kafka và Zookeeper.
